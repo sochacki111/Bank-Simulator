@@ -2,11 +2,17 @@ package com.company;
 
 public class Account {
 
+    private String accountNumber;
+    private double balance;
+    private String customerName;
+    private String email;
+    private int phoneNumber;
+
     public Account() {
-        this(1000000, 0, "Customer", "mail@example.com", 123456789);
+        this("1000000", 0, "Customer", "mail@example.com", 123456789);
     }
 
-    public Account(int accountNumber, double balance, String customerName, String email, int phoneNumber) {
+    public Account(String accountNumber, double balance, String customerName, String email, int phoneNumber) {
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.customerName = customerName;
@@ -14,18 +20,11 @@ public class Account {
         this.phoneNumber = phoneNumber;
     }
 
-    private int accountNumber;
-    private double balance;
-    private String customerName;
-    private String email;
-    private int phoneNumber;
-
-
-    public int getAccountNumber() {
+    public String getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
+    public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
 
